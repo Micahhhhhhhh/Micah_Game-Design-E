@@ -14,15 +14,15 @@ test2=78.5
 test3=86
 Flag=False
 #to display things on the screen, we use the function print
-print(type(test1), type(test2), type(Flag))
+# print(type(test1), type(test2), type(Flag))
 
 
-Sum = test1 + test2 + test3
+# Sum = test1 + test2 + test3
 
 
-print(Sum)
-Average = Sum/3
-print(Average)
-print("The average of 3 test is", Average)
+# print(Sum)
+# Average = Sum/3
+# print(Average)
+# print("The average of 3 test is", Average)
 print("test 1 =", test1, end=" ")
-print("test2", test2)
+# print("test2", test2)
