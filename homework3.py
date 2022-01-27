@@ -18,7 +18,10 @@ check=True
 while check:
     try:
         choice=int(input("Choice: "))
-        check = False
+        if choice > 0 and choice<4:
+            check = False
+        else:
+            print("please eneter a number from 1-3")
     except ValueError:
         print("Sorry, wrong choice, please insert 1 to 3 only")
 
