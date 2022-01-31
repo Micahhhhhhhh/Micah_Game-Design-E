@@ -2,6 +2,7 @@
 #Micah Robinson 1/27
 # choices = rock, paper, scissors
 
+#tell user that choices are , rock, paper, or scissors
 # if rock vs paper-> paper wins
 # if rock vs scissor-> rock wins
 # if paper vs scissor-> scissor wins
@@ -26,12 +27,12 @@ print("###############################################")
 
 
 user = input("Select Choice: ")
-choices = ["rock", "paper", "scissors"]
+choices = ("rock", "paper", "scissors")
 computer= random.choice(choices)
-print("\nYou chose {user}, computer chose {computer}.\n")
+print("You chose" ,user, "computer chose" ,computer,)
 
 if user == computer:
-    print("Both players selected {user}. It's a tie!")
+    print("Both players selected",user, "It's a tie!")
 elif user == "rock":
     if computer == "scissors":
         print("Rock smashes scissors! You win!")
@@ -53,12 +54,12 @@ choices= ( "Y", "N")
 if user == "Y":
     os.system('cls')
     user = input("Select Choice: ")
-choices = ["rock", "paper", "scissors"]
+choices = ("rock", "paper", "scissors")
 computer= random.choice(choices)
-print("\nYou chose {user}, computer chose {computer}.\n")
+print("You chose" ,user, "computer chose" ,computer,)
 
 if user == computer:
-    print("Both players selected {user}. It's a tie!")
+    print("Both players selected" ,user, "It's a tie!")
 elif user == "rock":
     if computer == "scissors":
         print("Rock smashes scissors! You win!")
