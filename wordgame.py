@@ -46,7 +46,7 @@ def selectWord():
     fruits= ["bannana", "grapes", "watermelon", "papaya", "oranges","tomatoes",
     "mangos", "kiwis","strawberries","apples", "blackberries","blueberries"]
     animals= ["lions", "tigers", "dogs", "zebras", "dolphins","sharks","monkeys","gorillas"]
-    computer_parts=["keyboard","mouse","screen","chord","charger"]
+    computer_parts=["keyboard","mouse","screen","chord","charger", "monitor", "printer","usb"]
     if choice == 1:
         words= random.choice(fruits)
 
