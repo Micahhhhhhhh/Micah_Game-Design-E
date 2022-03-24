@@ -56,8 +56,10 @@ def changeColor():
     colorCheck=True
     while colorCheck:
         randColors=random.choice(list(colors))
-        if randColors==background:
-            randColors=random.choice(list(colors))
+        if colors.get==background:
+           print(randColors)
+           print(background)
+           randColors=random.choice(list(colors))
         else:
             colorCheck=False
 
