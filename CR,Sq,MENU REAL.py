@@ -11,10 +11,13 @@
 # K_d                   right square
 # K_w                   up square
 # K_s                   down square
-# K_SPACE               jump
+# K_SPACE               jump777777777777777777777777777777777777777
 #initialize pygame
-import os, random, time, pygame, math
+import os, random, time, pygame, math, datetime
+os.system('cls')
 from pickle import TRUE
+
+# name=input("What is your name? ")
 #initialize pygame
 pygame.init()
 
@@ -32,6 +35,7 @@ SETT=False
 LEV_I=False
 #List f messages
 MenuList=['Instructions','Settings', "Color","Sound",'Level 1','Level 2','Level 3','Play Game']
+# BACK='BACK'
 SettingList=['Screen Size','Font Size','C','BC']
 check=True #for the while loop
 move=5 #pixels
@@ -79,7 +83,8 @@ def TitleMenu(Message):
     #x value = WIDTH/2 - wText/2
     xt=WIDTH/2-text.get_width()/2
     screen.blit(text,(xt,50))
-
+    # BACK=TITLE_FNT.render(Message, 1, (255,0,0))
+    # screen.blit(text,(xt,600))
 #Create First button
 
 
@@ -110,6 +115,10 @@ def changeColor():
             randColor=random.choice(list(colors))
         else:
             colorCheck=False
+def keepScore(score):
+    date=datetime.datetime.now()
+    print(date.strftime('%m/%d/%Y'))
+    score
 
 #sq_color=colors.get('navy')
 #Making a rand c f the square

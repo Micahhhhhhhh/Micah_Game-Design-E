@@ -31,7 +31,7 @@ INST=False
 SETT=False
 LEV_I=False
 #List f messages
-MenuList=['Instructions','Settings', "Color","Sound",'Level 1','Level 2','Level 3']
+MenuList=['Instructions','Settings', "Color","Sound",'Level 1','Level 2','Level 3','PLAY GAME']
 SettingList=['Screen Size','Font Size','C','BC']
 check=True #for the while loop
 move=5 #pixels
@@ -170,10 +170,10 @@ while check:
             INST=True
         
         # if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >600 and mouse_pos[1]<6390)) or INST:\
-        #     GameOn=True
+        #     GameOn=True       attempt for 'play game' code.
 
 
-# GameOn=True
+# GameOn=True   trying to make the game a function so when 'play game' is pressed, the game pulls up
 # while GameOn:
 
 # if keys[pygame.K_a] and square.x >=move:

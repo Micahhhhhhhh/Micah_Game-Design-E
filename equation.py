@@ -21,5 +21,5 @@ print("Var1= %5d"% var1)
 print("Var2= %5d"% var2)
 print("Var3= %8.2f"% var3)
 print("Var4= %5d"% var4)
-print("Result= %6.2f"% result)
+print("Result= %6.2f"% result) 
 
