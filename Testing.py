@@ -1,6 +1,3 @@
-#Micah Robinson
-
-
 #Objective of the game is for the rect to run away fom the circle, if they collide the circle etas the square, 
 #circle will  get larger, and a new rect should appear somewhere on the screen
 # K_UP                  up circle
@@ -15,7 +12,7 @@
 #initialize pygame
 import os, random, time, pygame, math, datetime
 os.system('cls')
-from pickle import FALSE, TRUE
+from pickle import TRUE
 
 # name=input("What is your name? ")
 #initialize pygame
@@ -33,19 +30,10 @@ MAIN=TRUE
 INST=False
 SETT=False
 LEV_I=False
-LEV_II=False
-LEV_III=False 
-SC_SIZE=False
-BG_COLOR=False
-SPRINT=False
-ON_OFF=False
-sc=False
-
 #List f messages
 MenuList=['Instructions','Settings', "Color","Sound",'Level 1','Level 2','Level 3','Play Game']
 # BACK='BACK'
 SettingList=['Screen Size','Font Size','C','BC']
-SC_SIZEList=['1000 x 1000', '800 x 800', ' 600 x 700']
 check=True #for the while loop
 move=5 #pixels
 #square variables
@@ -128,17 +116,6 @@ def keepScore(score):
     date=datetime.datetime.now()
     print(date.strftime('%m/%d/%Y'))
     score
-def changeScreenSize(xm,ym):
-    global HEIGHT, WIDTH, screen
-    if ((xm > 20 and xm <80) and (ym >250 and ym <280)):
-            HEIGHT=1000
-            WIDTH=1000
-    if ((xm > 20 and xm < 80) and (ym > 300 and 330)):
-            HEIGHT=800
-            WIDTH=800
-    if ((xm > 20 and xm < 80) and (ym > 350 and ym < 380)):
-            HEIGHT=600
-            WIDTH=600
 
 #sq_color=colors.get('navy')
 #Making a rand c f the square
@@ -149,8 +126,6 @@ sq_color=colors.get(randColor)
 MAX=10
 jumpCount=MAX
 JUMP=False
-xm=0
-ym=0
 while check:
     
     if MAIN:
@@ -163,60 +138,63 @@ while check:
     keys=pygame.key.get_pressed() #this returns a list
     if case.type ==pygame.MOUSEBUTTONDOWN:
         mouse_pos=pygame.mouse.get_pos()
-        xm= mouse_pos[0]
-        ym=mouse_pos[1]
         print(mouse_pos)
-        if ((xm >20 and xm <80) and (ym >250 and ym <290))and MAIN :
+        if ((mouse_pos[0] >20 and mouse_pos[0] <80) and (mouse_pos[1] >250 and mouse_pos[1] <290))or INST :
             MAIN=False
             screen.fill(background)
             TitleMenu("INSTRUCTIONS")
             INST=True
-        if ((xm >50 and xm <80) and (ym >302 and ym <330)) and MAIN:
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
+        if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >302 and mouse_pos[1] <330)) or INST:
             MAIN=False
             screen.fill(background)
             TitleMenu('SETTINGS')
             INST=True
-        if ((xm >50 and xm <80) and (ym >350 and ym<380)) and MAIN:
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
+        if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >350 and mouse_pos[1]<380)) or INST:
             MAIN=False
             screen.fill(background)
             TitleMenu('COLOR')
             INST=True
-        if ((xm >50 and xm <80) and (ym >400 and ym<430)) and MAIN:
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
+        if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >400 and mouse_pos[1]<430)) or INST:
             MAIN=False
             screen.fill(background)
             TitleMenu('SOUND')
             INST=True
-        if ((xm >50 and xm <80) and (ym >450 and ym<480)) or INST:
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
+        if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >450 and mouse_pos[1]<480)) or INST:
             MAIN=False
             screen.fill(background)
             TitleMenu('LEVEL 1')
             INST=True
-        if ((xm >50 and xm <80) and (ym >500 and ym<530)) or INST:
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
+        if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >500 and mouse_pos[1]<530)) or INST:
             MAIN=False
             screen.fill(background)
             TitleMenu('LEVEL 2')
             INST=True
-        if ((xm >50 and xm <80) and (ym >550 and ym<580)) or INST:
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
+        if ((mouse_pos[0] >50 and mouse_pos[0] <80) and (mouse_pos[1] >550 and mouse_pos[1]<580)) or INST:
             MAIN=False
             screen.fill(background)
             TitleMenu('LEVEL 3')
             INST=True
-        if SETT and sc:
-            if ((xm >20 and xm <80) and (ym >250 and ym <290))and SETT :
-                SETT=False
-                SC_SIZE=True
-            if ((xm >50 and xm <80) and (ym >302 and ym <330)) and SETT:
-                SETT=False
-                BG_COLOR=True 
-            if ((xm >50 and xm <80) and (ym >350 and ym<380)) and SETT:
-                SETT=False
-                SPRINT=True
-            if ((xm >50 and xm <80) and (ym >400 and ym<430)) and SETT:
-                SETT=False
-                ON_OFF=True
-            else:
-                sc=True
-   
+            if keys[pygame.K_ESCAPE]:
+                   INST=False
+                   MAIN=True
 
 #     if keys[pygame.K_a] and square.x >=move:
 #         square.x -= move #substract 5 from the x value
@@ -270,4 +248,3 @@ while check:
 
     pygame.display.update()
     pygame.time.delay(10)
-
