@@ -93,7 +93,7 @@ def changeColor():
             colorCheck=False
 def instr():
     print("in instr")
-    myFile=open('ClassStuff\CircleEatsSquare\instructions.txt', 'r')
+    myFile=open('Instruction.txt', 'r')
     yi=150
     stuff= myFile.readlines()
 
@@ -272,7 +272,7 @@ f_SEET=True
 sc_size=False
 set_first=True
 c_first=True
-while check:
+while check:   
     for case in pygame.event.get():
         if case.type==pygame.QUIT:
             check=False
