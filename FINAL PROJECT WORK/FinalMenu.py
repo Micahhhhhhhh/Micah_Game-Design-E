@@ -108,7 +108,7 @@ def keepScore(score):
     myFile.write(scoreLine)
     myFile.close()
 def scoreBoard():
-    myFile=open('ClassStuff\CircleEatsSquare\sce.txt', 'r')
+    myFile=open('FINAL PROJECT WORK\score.txt', 'r')
     yi=150
     stuff= myFile.readlines()
     myFile.close()
@@ -271,6 +271,7 @@ def playGame1():
         
         else:
             display_text = 'SORRY :( PLAY AGAIN ? Y/N'
+            
         
 
        
@@ -405,8 +406,12 @@ def playGame2():
                 won = False
 
         if won:
-            game_over = True
-            display_text = 'CONGRATS :) PLAY AGAIN ? Y/N' 
+           if won:
+            # game_over = True
+            # display_text = 'CONGRATS :) PLAY AGAIN ? Y/N' 
+            # pygame.time.delay(1000)
+            MainMenu(Mlist)
+            pygame.display.update
            
             
         
@@ -414,8 +419,6 @@ def playGame2():
             display_text = 'SORRY :( PLAY AGAIN ? Y/N'
         
 
-        # def PlayAgain():
-        #     global gameOn
             
 
 
@@ -547,9 +550,12 @@ def playGame3():
                 won = False
 
         if won:
-            game_over = True
-            display_text = 'CONGRATS :) PLAY AGAIN ? Y/N' 
-           
+           if won:
+            # game_over = True
+            # display_text = 'CONGRATS :) PLAY AGAIN ? Y/N' 
+            # pygame.time.delay(1000)
+            MainMenu(Mlist)
+            pygame.display.update
             
         
         else:
