@@ -1,0 +1,9 @@
+Welcome to my Hangman Game! The objective of the game, is to guess the word before 
+you run out of guesses. You will be given 6 guesses each levek to guess the game!
+
+After the game is completed, you will have the option to either play again, or exit the game by using keys Y and N, 
+Y meaning Yes, N being No. 
+
+Your score will be based off of the number of guesses and the length of the word you'd be trying to guess!
+
+GOODLUCK :)))
