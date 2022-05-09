@@ -74,9 +74,8 @@ letter_font = pygame.font.SysFont('arial', 50)
 game_font = pygame.font.SysFont('arial', 50)
 
 #WORD
-WordList1 = ["LEBRON","KYRIE","ZION","KAWHI","GIANNIS","NIKOLA","KOBE","SHAQUILLE","DAMIAN",
-"JOEL","LUKA","STEPHEN","KD","BAM"]
-
+WordList1 = ['MAHOMES','NEWTON',"BRADY",'KUPP','RODGERS','BECKAM','ELLIOT',"PRESCOTT",'COOPER','LAMB','ADAMS',
+'JONES','MURRAY','HOPKINS','KIRK','PARSONS','RAMSEY','JACKSON','DIGGS','ALLEN']
 WORD = random.choice(WordList1)
 
 GUESSED = []
