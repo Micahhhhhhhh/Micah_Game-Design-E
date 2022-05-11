@@ -146,6 +146,7 @@ def changeScreenSize(xm,ym):
     screen=pygame.display.set_mode((WIDTH,HEIGHT))
  
 def playGame1():
+    global MAIN,LEV_I
     def draw_btns(BUTTONS):
         for button,letter in BUTTONS:
             btn_text = btn_font.render(letter, True, BLACK)
@@ -169,7 +170,7 @@ def playGame1():
 
 
     pygame.init()
-    WIDTH, HEIGHT = 800, 500
+    # WIDTH, HEIGHT = 800, 500
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Hangman")
 
@@ -265,8 +266,8 @@ def playGame1():
             # game_over = True
             # display_text = 'CONGRATS :) PLAY AGAIN ? Y/N' 
             # pygame.time.delay(1000)
-            MainMenu(Mlist)
-            pygame.display.update
+            MAIN = True
+            LEV_I = False
             
         
         else:
